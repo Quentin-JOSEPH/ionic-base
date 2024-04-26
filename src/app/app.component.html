@@ -1,3 +1,15 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>
+      {{ 'discorver' | translate }}
+    </ion-title>
+    <ion-buttons slot="end">
+      <ion-button (click)="switchLanguage('fr')">French</ion-button>
+      <ion-button (click)="switchLanguage('en')">English</ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
 <ion-app>
   <ion-router-outlet></ion-router-outlet>
 </ion-app>

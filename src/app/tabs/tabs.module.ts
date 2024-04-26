@@ -6,6 +6,7 @@ import { FormsModule } from '@angular/forms';
 import { TabsPageRoutingModule } from './tabs-routing.module';
 
 import { TabsPage } from './tabs.page';
+import { TranslateService } from '@ngx-translate/core';
 
 @NgModule({
   imports: [
@@ -16,4 +17,18 @@ import { TabsPage } from './tabs.page';
   ],
   declarations: [TabsPage]
 })
-export class TabsPageModule {}
+export class TabsPageModule {
+
+constructor(private translate: TranslateService) {
+  this.initializeApp();
+}
+
+initializeApp() {
+  this.translate.setDefaultLang('fr');
+  this.translate.use('fr'); // You can set the default language here
+}
+
+switchLanguage(language: string) {
+  this.translate.use(language);
+}
+}

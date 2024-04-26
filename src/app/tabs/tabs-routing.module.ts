@@ -1,6 +1,7 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { TabsPage } from './tabs.page';
+// import { AppModule } from '../app.module';
 
 const routes: Routes = [
   {
@@ -34,6 +35,9 @@ const routes: Routes = [
 ];
 
 @NgModule({
-  imports: [RouterModule.forChild(routes)],
+  imports: [
+    RouterModule.forChild(routes),
+    // AppModule,
+  ],
 })
 export class TabsPageRoutingModule {}
