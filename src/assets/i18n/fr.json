@@ -1,5 +1,7 @@
 {
-  "discorver":"Découvrir",
-  "favorite":"Favoris",
-  "profil":"Profil"
+  "menu": {
+    "discorver":"Découvrir",
+    "favorite":"Favoris",
+    "profil":"Profil"
+  }
 }

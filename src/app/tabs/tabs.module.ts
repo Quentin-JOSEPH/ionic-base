@@ -6,29 +6,29 @@ import { FormsModule } from '@angular/forms';
 import { TabsPageRoutingModule } from './tabs-routing.module';
 
 import { TabsPage } from './tabs.page';
-import { TranslateService } from '@ngx-translate/core';
+
+import {  HttpClient } from '@angular/common/http';
+import { TranslateModule, TranslateLoader } from '@ngx-translate/core';
+import { TranslateHttpLoader } from '@ngx-translate/http-loader';
+export function createTranslateLoader(http: HttpClient) {
+  return new TranslateHttpLoader(http, "./assets/i18n/", ".json");
+}
+
 
 @NgModule({
   imports: [
     IonicModule,
     CommonModule,
     FormsModule,
-    TabsPageRoutingModule
+    TabsPageRoutingModule,
+    TranslateModule.forChild({
+      loader: {
+        provide: TranslateLoader,
+        useFactory: createTranslateLoader,
+        deps: [HttpClient]
+      }
+    })
   ],
   declarations: [TabsPage]
 })
-export class TabsPageModule {
-
-constructor(private translate: TranslateService) {
-  this.initializeApp();
-}
-
-initializeApp() {
-  this.translate.setDefaultLang('fr');
-  this.translate.use('fr'); // You can set the default language here
-}
-
-switchLanguage(language: string) {
-  this.translate.use(language);
-}
-}
+export class TabsPageModule {}
