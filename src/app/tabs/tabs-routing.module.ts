@@ -13,8 +13,8 @@ const routes: Routes = [
         loadChildren: () => import('../discover/discover.module').then(m => m.DiscoverPageModule)
       },
       {
-        path: 'tab2',
-        loadChildren: () => import('../tab2/tab2.module').then(m => m.Tab2PageModule)
+        path: 'favourites',
+        loadChildren: () => import('../favourites/favourites.module').then(m => m.FavouritesPageModule)
       },
       {
         path: 'tab3',
