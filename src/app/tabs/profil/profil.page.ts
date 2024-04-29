@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { DataStorageService } from 'src/app/common/services/data-storage.service';
 
@@ -13,14 +13,14 @@ import { DataStorageService } from 'src/app/common/services/data-storage.service
   templateUrl: 'profil.page.html',
   styleUrls: ['profil.page.scss']
 })
-export class ProfilPage {
+export class ProfilPage implements OnInit {
 
   keyStorage: string = 'userId';
   userId: string = 'no value';
 
   constructor(private dataStorageService: DataStorageService, private router: Router) {}
 
-  ngOnInit() {
+  ngOnInit(): void {
     this.dataStorageService.getData(this.keyStorage).then(
       data => {
         console.log(data);
