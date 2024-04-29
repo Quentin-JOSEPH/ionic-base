@@ -30,8 +30,11 @@
     "@ionic/angular": "^7.0.0",
     "@ngx-translate/core": "^15.0.0",
     "@ngx-translate/http-loader": "^8.0.0",
+    "@tailwindcss/forms": "^0.5.7",
+    "@tailwindcss/typography": "^0.5.13",
     "ionicons": "^7.0.0",
     "rxjs": "~7.8.0",
+    "tailwindcss": "^3.4.3",
     "tslib": "^2.3.0",
     "zone.js": "~0.14.2"
   },
