@@ -15,7 +15,23 @@
 
   <app-explore-container [name]="'menu.profil' | translate"></app-explore-container>
 
-  <div class="bg-red-700">
-    AAAAAAAAAAAAA
+  <div class="flex flex-col gap-2">
+    <div class="flex px-2 py-3 bg-gray-800">
+      <div class="grow text-center text-2xl">account pseudo</div>
+      <div class="w-8 text-xl flex">
+        <ion-icon name="settings-sharp" class="m-auto cursor-pointer"></ion-icon>
+      </div>
+    </div>
+
+    <div class="flex">
+      <div class="mx-auto flex flex-row gap-1">
+        <div><ion-button color="tertiary">Admin</ion-button></div>
+        <div><ion-button color="success">Customer</ion-button></div>
+        <div><ion-button color="danger">User</ion-button></div>
+      </div>
+    </div>
+    <div class="flex">
+      <ion-button color="danger" class="mx-auto">Log out</ion-button>
+    </div>
   </div>
 </ion-content>
