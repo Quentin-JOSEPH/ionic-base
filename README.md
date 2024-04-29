@@ -1,4 +1,10 @@
-﻿# scanner-with-capacitor
+﻿# Global information
+
+```
+ionic serve
+```
+
+# scanner-with-capacitor
 https://ionic.io/blog/how-to-build-an-ionic-barcode-scanner-with-capacitor
 
 
