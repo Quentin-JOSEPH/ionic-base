@@ -2,10 +2,10 @@ import { IonicModule } from '@ionic/angular';
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
-import { FavouritesPage } from './favourites.page';
-import { ExploreContainerComponentModule } from '../explore-container/explore-container.module';
+import { ProfilPage } from './profil.page';
+import { ExploreContainerComponentModule } from '../../explore-container/explore-container.module';
 
-import { FavouritesPageRoutingModule } from './favourites-routing.module';
+import { ProfilPageRoutingModule } from './profil-routing.module';
 
 import {  HttpClient } from '@angular/common/http';
 import { TranslateModule, TranslateLoader } from '@ngx-translate/core';
@@ -20,7 +20,7 @@ export function createTranslateLoader(http: HttpClient) {
     CommonModule,
     FormsModule,
     ExploreContainerComponentModule,
-    FavouritesPageRoutingModule,
+    ProfilPageRoutingModule,
     TranslateModule.forChild({
       loader: {
         provide: TranslateLoader,
@@ -29,6 +29,6 @@ export function createTranslateLoader(http: HttpClient) {
       }
     })
   ],
-  declarations: [FavouritesPage]
+  declarations: [ProfilPage]
 })
-export class FavouritesPageModule {}
+export class ProfilPageModule {}

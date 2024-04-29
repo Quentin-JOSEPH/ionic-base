@@ -9,15 +9,15 @@ const routes: Routes = [
     children: [
       {
         path: 'discover',
-        loadChildren: () => import('../discover/discover.module').then(m => m.DiscoverPageModule)
+        loadChildren: () => import('./discover/discover.module').then(m => m.DiscoverPageModule)
       },
       {
         path: 'favourites',
-        loadChildren: () => import('../favourites/favourites.module').then(m => m.FavouritesPageModule)
+        loadChildren: () => import('./favourites/favourites.module').then(m => m.FavouritesPageModule)
       },
       {
         path: 'profil',
-        loadChildren: () => import('../profil/profil.module').then(m => m.ProfilPageModule)
+        loadChildren: () => import('./profil/profil.module').then(m => m.ProfilPageModule)
       },
       {
         path: '',
