@@ -1,7 +1,7 @@
 {
   "menu": {
-    "discorver":"Découvrir",
-    "favorite":"Favoris",
+    "discover":"Découvrir",
+    "favourites":"Favoris",
     "profil":"Profil"
   }
 }
