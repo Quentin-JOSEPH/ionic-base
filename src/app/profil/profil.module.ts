@@ -2,10 +2,10 @@ import { IonicModule } from '@ionic/angular';
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
-import { Tab3Page } from './tab3.page';
+import { ProfilPage } from './profil.page';
 import { ExploreContainerComponentModule } from '../explore-container/explore-container.module';
 
-import { Tab3PageRoutingModule } from './tab3-routing.module';
+import { ProfilPageRoutingModule } from './profil-routing.module';
 
 import {  HttpClient } from '@angular/common/http';
 import { TranslateModule, TranslateLoader } from '@ngx-translate/core';
@@ -20,7 +20,7 @@ export function createTranslateLoader(http: HttpClient) {
     CommonModule,
     FormsModule,
     ExploreContainerComponentModule,
-    Tab3PageRoutingModule,
+    ProfilPageRoutingModule,
     TranslateModule.forChild({
       loader: {
         provide: TranslateLoader,
@@ -29,6 +29,6 @@ export function createTranslateLoader(http: HttpClient) {
       }
     })
   ],
-  declarations: [Tab3Page]
+  declarations: [ProfilPage]
 })
-export class Tab3PageModule {}
+export class ProfilPageModule {}
