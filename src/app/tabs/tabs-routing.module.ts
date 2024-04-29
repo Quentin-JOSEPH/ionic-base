@@ -16,6 +16,10 @@ const routes: Routes = [
         loadChildren: () => import('./favourites/favourites.module').then(m => m.FavouritesPageModule)
       },
       {
+        path: 'my-place',
+        loadChildren: () => import('./my-place/my-place.module').then(m => m.MyPlacePageModule)
+      },
+      {
         path: 'profil',
         loadChildren: () => import('./profil/profil.module').then(m => m.ProfilPageModule)
       },
@@ -30,7 +34,8 @@ const routes: Routes = [
     path: '',
     redirectTo: '/tabs/discover',
     pathMatch: 'full'
-  }
+  },
+
 ];
 
 @NgModule({
@@ -38,4 +43,4 @@ const routes: Routes = [
     RouterModule.forChild(routes),
   ],
 })
-export class TabsPageRoutingModule {}
+export class TabsPageRoutingModule { }

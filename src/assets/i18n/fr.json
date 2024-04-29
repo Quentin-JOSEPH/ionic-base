@@ -2,6 +2,7 @@
   "menu": {
     "discover":"Découvrir",
     "favourites":"Favoris",
+    "my-place": "Mon lieu",
     "profil":"Profil"
   }
 }
