@@ -5,6 +5,7 @@ import { FormsModule } from '@angular/forms';
 import { IonicModule } from '@ionic/angular';
 
 import { MyPlacePageRoutingModule } from './my-place-routing.module';
+import { ExploreContainerComponentModule } from '../../explore-container/explore-container.module';
 
 import { MyPlacePage } from './my-place.page';
 
@@ -21,6 +22,7 @@ export function createTranslateLoader(http: HttpClient) {
     FormsModule,
     IonicModule,
     MyPlacePageRoutingModule,
+    ExploreContainerComponentModule,
     TranslateModule.forChild({
       loader: {
         provide: TranslateLoader,
