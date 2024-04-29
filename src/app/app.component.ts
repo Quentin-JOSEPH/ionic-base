@@ -13,6 +13,16 @@ export class AppComponent {
   }
 
   initializeApp() {
+    // let languages = ['en', 'de', 'fr', 'it'];
+    // const language: Promise<GetLanguageCodeResult> = Device.getLanguageCode();
+    // language.then(data => {
+    //   let lang = 'fr';
+    //   if (languages.indexOf(data.value) !== -1) {
+    //     lang = data.value;
+    //   }
+    //   this.translate.use(lang);
+    // });
+
     this.translate.setDefaultLang('fr');
     this.translate.use('fr'); // You can set the default language here
   }
