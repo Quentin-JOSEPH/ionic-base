@@ -32,3 +32,27 @@ export enum UserRole {
     All = 'All',
     Callagent = 'Callagent'
 }
+
+export enum ContactType {
+    Decider = 'Decider',
+    Billing = 'Billing',
+    Technician = 'Technician',
+    Standard = 'Standard',
+    Assistant = 'Assistant',
+}
+
+export enum Currency {
+    EUR = 'EUR',
+    CHF = 'CHF',
+    DKK = 'DKK',
+    SEK = 'SEK',
+    NOK = 'NOK',
+    GBP = 'GBP',
+    CAD = 'CAD',
+    USD = 'USD'
+}
+
+export enum ClassificationScope {
+    Pub = 'Pub',
+    Association = 'Association',
+}
