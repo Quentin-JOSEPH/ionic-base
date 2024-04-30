@@ -40,6 +40,9 @@
       <ion-button color="danger" class="mx-auto" (click)="logout()">Log out</ion-button>
     </div>
 
+    <ion-button (click)="switchLanguage('fr')">French</ion-button>
+    <ion-button (click)="switchLanguage('en')">English</ion-button>
+
     <div>
       userId : {{dataStorageService.userId}}
     </div>

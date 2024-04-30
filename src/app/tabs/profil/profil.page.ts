@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
+import { TranslateService } from '@ngx-translate/core';
 import { Credential, User } from 'src/app/common/interface/account';
 import { ApiService } from 'src/app/common/services/api.service';
 import { CacheService } from 'src/app/common/services/cache.service';
@@ -21,10 +22,14 @@ export class ProfilPage implements OnInit {
 
   appVersion = environment.appVersion;
 
-  constructor(public dataStorageService: DataStorageService, private router: Router, public cacheData: CacheService, private api: ApiService) { }
+  constructor(public dataStorageService: DataStorageService, private router: Router, public cacheData: CacheService, private api: ApiService, private translate: TranslateService) { }
 
   ngOnInit(): void {
     console.log('profil');
+  }
+
+  switchLanguage(language: string) {
+    this.translate.use(language);
   }
 
   connectUser(cred: Credential) {

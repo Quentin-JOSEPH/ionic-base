@@ -26,8 +26,4 @@ export class AppComponent {
     this.translate.setDefaultLang('fr');
     this.translate.use('fr'); // You can set the default language here
   }
-
-  switchLanguage(language: string) {
-    this.translate.use(language);
-  }
 }
