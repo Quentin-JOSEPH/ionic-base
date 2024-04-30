@@ -16,21 +16,14 @@ export enum ReachPointType {
 
 export enum Language {
     English = 'English',
-    Italian = 'Italian',
-    German = 'German',
-    French = 'French'
+    French = 'Français'
 }
 
 export enum UserRole {
     VRP = 'VRP',
-    Scheduler = 'Scheduler',
     Administrator = 'Administrator',
-    AccountingLeader = 'AccountingLeader',
-    AccoutingAssistant = 'AccoutingAssistant',
     Standard = 'Standard',
-    Direction = 'Direction',
     All = 'All',
-    Callagent = 'Callagent'
 }
 
 export enum ContactType {
@@ -43,13 +36,13 @@ export enum ContactType {
 
 export enum Currency {
     EUR = 'EUR',
-    CHF = 'CHF',
-    DKK = 'DKK',
-    SEK = 'SEK',
-    NOK = 'NOK',
-    GBP = 'GBP',
-    CAD = 'CAD',
-    USD = 'USD'
+    // CHF = 'CHF',
+    // DKK = 'DKK',
+    // SEK = 'SEK',
+    // NOK = 'NOK',
+    // GBP = 'GBP',
+    // CAD = 'CAD',
+    // USD = 'USD'
 }
 
 export enum ClassificationScope {
