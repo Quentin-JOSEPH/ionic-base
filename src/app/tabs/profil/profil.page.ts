@@ -16,16 +16,15 @@ import { DataStorageService } from 'src/app/common/services/data-storage.service
 export class ProfilPage implements OnInit {
 
   keyStorage: string = 'userId';
-  userId: string = 'no value';
 
-  constructor(private dataStorageService: DataStorageService, private router: Router) {}
+  constructor(public dataStorageService: DataStorageService, private router: Router) {}
 
   ngOnInit(): void {
     this.dataStorageService.getData(this.keyStorage).then(
       data => {
         console.log(data);
         if (data) {
-          this.userId = data;
+          this.dataStorageService.userId = data;
         }
       }
     );

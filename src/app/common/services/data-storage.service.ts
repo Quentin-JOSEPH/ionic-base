@@ -6,6 +6,8 @@ import { Storage } from '@ionic/storage';
 })
 export class DataStorageService {
 
+  userId: string = 'no value';
+
   constructor(private storage: Storage) { }
 
   // Save data to storage
