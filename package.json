@@ -1,13 +1,13 @@
 {
   "name": "wwd",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "author": "Ionic Framework",
   "homepage": "https://ionicframework.com/",
   "scripts": {
     "ng": "ng",
     "start": "ionic serve",
     "start angular": "ng serve",
-    "build": "ng build",
+    "build": "set NODE_ENV=production&& npm --no-git-tag-version version patch && ng build --configuration=production",
     "watch": "ng build --watch --configuration development",
     "test": "ng test",
     "lint": "ng lint"
