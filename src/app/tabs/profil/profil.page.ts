@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { DataStorageService } from 'src/app/common/services/data-storage.service';
+import { environment } from 'src/environments/environment';
 
 // import { Component } from '@angular/core';
 // // import { Barcode, BarcodeScanner } from '@capacitor-mlkit/barcode-scanning';
@@ -15,6 +16,7 @@ import { DataStorageService } from 'src/app/common/services/data-storage.service
 })
 export class ProfilPage implements OnInit {
 
+  appVersion = environment.appVersion;
   keyStorage: string = 'userId';
 
   constructor(public dataStorageService: DataStorageService, private router: Router) {}
