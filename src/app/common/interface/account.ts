@@ -5,12 +5,10 @@ export interface Account {
 }
 
 export interface Credential {
-  id: number;
   username: string;
   password: string;
   platform: string;
   version: string;
-  lastConnection: Date;
 }
 
 export interface User {
@@ -21,7 +19,7 @@ export interface User {
   device?: Device;
   reference?: string;
   roles?: UserRole[];
-  credentials?: Credential[];
+  lastConnection?: Date;
 }
 
 export interface UserCachedData {

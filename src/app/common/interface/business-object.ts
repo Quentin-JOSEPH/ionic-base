@@ -12,3 +12,13 @@ export interface Message {
     stackTrace?: string;
     exception?: string;
 }
+
+export interface TypedResponse<T> extends Response {
+  clsid: string;
+  result: T;
+}
+
+export interface BooleanResponse extends Response {
+  clsid: string;
+  result: Boolean;
+}

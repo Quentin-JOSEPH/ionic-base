@@ -1,5 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
+import { Credential, User } from 'src/app/common/interface/account';
+import { ApiService } from 'src/app/common/services/api.service';
+import { CacheService } from 'src/app/common/services/cache.service';
 import { DataStorageService } from 'src/app/common/services/data-storage.service';
 import { environment } from 'src/environments/environment';
 
@@ -17,36 +20,37 @@ import { environment } from 'src/environments/environment';
 export class ProfilPage implements OnInit {
 
   appVersion = environment.appVersion;
-  keyStorage: string = 'userId';
 
-  constructor(public dataStorageService: DataStorageService, private router: Router) {}
+  constructor(public dataStorageService: DataStorageService, private router: Router, public cacheData: CacheService, private api: ApiService) { }
 
   ngOnInit(): void {
-    this.dataStorageService.getData(this.keyStorage).then(
-      data => {
-        console.log(data);
-        if (data) {
-          this.dataStorageService.userId = data;
-        }
-      }
-    );
+    console.log('profil');
   }
 
-  setStore(value: string) {
-    const key = 'scale';
-    // const value = '140d880b-c429-4a90-ba38-b422719baff1';
-    // const value = '00000000-0000-0000-0000-000000000000';
-
-    this.dataStorageService.saveData(key, value)
-      .then(() => console.log('Data saved successfully'))
-      .catch(error => console.error('Error saving data:', error));
-    // this.router.navigateByUrl('/tabs/discover');
+  connectUser(cred: Credential) {
+    this.api.getCredential(cred).subscribe(response => {
+      this.cacheData.user = response.result;
+    });
   }
 
-  deleteStore() {
-    this.dataStorageService.removeData(this.keyStorage)
-      .then(() => console.log('Data saved successfully'))
-      .catch(error => console.error('Error saving data:', error));
-    // this.router.navigateByUrl('/tabs/discover');
+  connectUserForTest(type: string) {
+    let cred: Credential = {
+      username: '',
+      password: '',
+      platform: '',
+      version: environment.appVersion,
+    };
+
+    let user: User = {
+      firstName: type,
+      lastName: 'TestOnly',
+      lastConnection: new Date(),
+    }
+
+    this.cacheData.user = user;
+  }
+
+  logout() {
+    this.cacheData.user = undefined;
   }
 }

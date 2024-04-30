@@ -2,6 +2,8 @@ import { Injectable } from '@angular/core';
 import { HttpClient, HttpErrorResponse, HttpHeaders } from '@angular/common/http';
 import { Observable, catchError, throwError } from 'rxjs';
 import { environment } from 'src/environments/environment';
+import { Credential, User } from '../interface/account';
+import { TypedResponse } from '../interface/business-object';
 
 @Injectable({
   providedIn: 'root'
@@ -40,7 +42,7 @@ export class ApiService {
     return throwError(() => new Error(errorMessage));
   }
 
-  getCredential(credential: Credential) {
+  getCredential(credential: Credential): Observable<TypedResponse<User>> {
     //TODO check who  is better (I guess load)
     this.getData('');
 
