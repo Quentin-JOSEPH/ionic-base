@@ -5,8 +5,8 @@
 export const environment = {
   production: false,
   API_URL: "http://localhost:8100/api/",
-  // appVersion: require('../../package.json').version + '-dev',
-  appVersion: '000000'
+  appVersion: require('../../package.json').version + '-dev',
+  // appVersion: packageJson.version
 };
 
 /*
