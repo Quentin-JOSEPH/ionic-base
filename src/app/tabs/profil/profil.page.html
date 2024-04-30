@@ -19,9 +19,9 @@
     <div class="flex px-2 py-3 bg-gray-800">
       <div class="grow text-center text-2xl">
         @if(cacheData.user){
-          {{cacheData.user.firstName}} {{cacheData.user.lastName}}
+        {{cacheData.user.firstName}} {{cacheData.user.lastName}}
         } @else {
-          Gest
+        Gest
         }
       </div>
       <div class="w-8 text-xl flex">
@@ -40,8 +40,10 @@
       <ion-button color="danger" class="mx-auto" (click)="logout()">Log out</ion-button>
     </div>
 
-    <ion-button (click)="switchLanguage('fr')">French</ion-button>
-    <ion-button (click)="switchLanguage('en')">English</ion-button>
+    <div class="mx-auto flex flex-row gap-1">
+      <ion-button (click)="switchLanguage('fr')">French</ion-button>
+      <ion-button (click)="switchLanguage('en')">English</ion-button>
+    </div>
 
     <div>
       userId : {{dataStorageService.userId}}
